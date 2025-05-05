@@ -91,12 +91,14 @@ module.exports = (app) => {
                   },
                 },
               },
+              parameters: [],
+              headers: [],
             },
 
             {
               isAuth: true,
               method: "PATCH",
-              url: "/users/:userId",
+              url: "/users/{userId}",
               title: "updateUser",
               query: [],
 
@@ -117,12 +119,20 @@ module.exports = (app) => {
                   },
                 },
               },
+              parameters: [
+                {
+                  key: "userId",
+                  value: "",
+                  description: "",
+                },
+              ],
+              headers: [],
             },
 
             {
               isAuth: true,
               method: "PATCH",
-              url: "/userroles/:userId",
+              url: "/userroles/{userId}",
               title: "updateUserRole",
               query: [],
 
@@ -135,12 +145,20 @@ module.exports = (app) => {
                   },
                 },
               },
+              parameters: [
+                {
+                  key: "userId",
+                  value: "",
+                  description: "",
+                },
+              ],
+              headers: [],
             },
 
             {
               isAuth: true,
               method: "GET",
-              url: "/users/:userId",
+              url: "/users/{userId}",
               title: "getUser",
               query: [],
 
@@ -148,6 +166,14 @@ module.exports = (app) => {
                 type: "json",
                 content: {},
               },
+              parameters: [
+                {
+                  key: "userId",
+                  value: "",
+                  description: "",
+                },
+              ],
+              headers: [],
             },
 
             {
@@ -161,6 +187,8 @@ module.exports = (app) => {
                 type: "json",
                 content: {},
               },
+              parameters: [],
+              headers: [],
             },
           ],
         },
@@ -240,6 +268,8 @@ module.exports = (app) => {
                   },
                 },
               },
+              parameters: [],
+              headers: [],
             },
 
             {
@@ -266,6 +296,8 @@ module.exports = (app) => {
                   },
                 },
               },
+              parameters: [],
+              headers: [],
             },
 
             {
@@ -292,6 +324,8 @@ module.exports = (app) => {
                   },
                 },
               },
+              parameters: [],
+              headers: [],
             },
 
             {
@@ -318,6 +352,8 @@ module.exports = (app) => {
                   },
                 },
               },
+              parameters: [],
+              headers: [],
             },
 
             {
@@ -348,6 +384,8 @@ module.exports = (app) => {
                   },
                 },
               },
+              parameters: [],
+              headers: [],
             },
 
             {
@@ -378,6 +416,8 @@ module.exports = (app) => {
                   },
                 },
               },
+              parameters: [],
+              headers: [],
             },
 
             {
@@ -408,6 +448,8 @@ module.exports = (app) => {
                   },
                 },
               },
+              parameters: [],
+              headers: [],
             },
 
             {
@@ -438,6 +480,8 @@ module.exports = (app) => {
                   },
                 },
               },
+              parameters: [],
+              headers: [],
             },
 
             {
@@ -472,12 +516,14 @@ module.exports = (app) => {
                   },
                 },
               },
+              parameters: [],
+              headers: [],
             },
 
             {
               isAuth: true,
               method: "PATCH",
-              url: "/givenpermissions/:givenPermissionId",
+              url: "/givenpermissions/{givenPermissionId}",
               title: "updateGivenPermission",
               query: [],
 
@@ -510,12 +556,20 @@ module.exports = (app) => {
                   },
                 },
               },
+              parameters: [
+                {
+                  key: "givenPermissionId",
+                  value: "",
+                  description: "",
+                },
+              ],
+              headers: [],
             },
 
             {
               isAuth: true,
               method: "DELETE",
-              url: "/givenpermissions/:givenPermissionId",
+              url: "/givenpermissions/{givenPermissionId}",
               title: "deleteGivenPermission",
               query: [],
 
@@ -523,12 +577,20 @@ module.exports = (app) => {
                 type: "json",
                 content: {},
               },
+              parameters: [
+                {
+                  key: "givenPermissionId",
+                  value: "",
+                  description: "",
+                },
+              ],
+              headers: [],
             },
 
             {
               isAuth: true,
               method: "GET",
-              url: "/givenpermissions/:givenPermissionId",
+              url: "/givenpermissions/{givenPermissionId}",
               title: "getGivenPermission",
               query: [],
 
@@ -536,6 +598,14 @@ module.exports = (app) => {
                 type: "json",
                 content: {},
               },
+              parameters: [
+                {
+                  key: "givenPermissionId",
+                  value: "",
+                  description: "",
+                },
+              ],
+              headers: [],
             },
 
             {
@@ -549,6 +619,8 @@ module.exports = (app) => {
                 type: "json",
                 content: {},
               },
+              parameters: [],
+              headers: [],
             },
           ],
         },
