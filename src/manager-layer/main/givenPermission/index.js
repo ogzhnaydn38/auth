@@ -1,0 +1,15 @@
+module.exports = {
+  CreateGivenpermissionManager: require("./create-givenpermission"),
+  CreateRolepermissionManager: require("./create-rolepermission"),
+  CreateUserpermissionManager: require("./create-userpermission"),
+  CreateGrouppermissionManager: require("./create-grouppermission"),
+  CreateRolegrouppermissionManager: require("./create-rolegrouppermission"),
+  CreateObjectpermissionManager: require("./create-objectpermission"),
+  CreateObjectgrouppermissionManager: require("./create-objectgrouppermission"),
+  CreateObjectrolepermissionManager: require("./create-objectrolepermission"),
+  CreateObjectgrouprolepermissionManager: require("./create-objectgrouprolepermission"),
+  UpdateGivenpermissionManager: require("./update-givenpermission"),
+  DeleteGivenpermissionManager: require("./delete-givenpermission"),
+  RetriveGivenpermissionManager: require("./retrive-givenpermission"),
+  ListGivenpermissionsManager: require("./list-givenpermissions"),
+};

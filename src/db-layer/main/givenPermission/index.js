@@ -1,0 +1,27 @@
+const utils = require("./utils");
+
+module.exports = {
+  dbCreateGivenpermission: require("./dbCreateGivenpermission"),
+  dbCreateRolepermission: require("./dbCreateRolepermission"),
+  dbCreateUserpermission: require("./dbCreateUserpermission"),
+  dbCreateGrouppermission: require("./dbCreateGrouppermission"),
+  dbCreateRolegrouppermission: require("./dbCreateRolegrouppermission"),
+  dbCreateObjectpermission: require("./dbCreateObjectpermission"),
+  dbCreateObjectgrouppermission: require("./dbCreateObjectgrouppermission"),
+  dbCreateObjectrolepermission: require("./dbCreateObjectrolepermission"),
+  dbCreateObjectgrouprolepermission: require("./dbCreateObjectgrouprolepermission"),
+  dbUpdateGivenpermission: require("./dbUpdateGivenpermission"),
+  dbDeleteGivenpermission: require("./dbDeleteGivenpermission"),
+  dbRetriveGivenpermission: require("./dbRetriveGivenpermission"),
+  dbListGivenpermissions: require("./dbListGivenpermissions"),
+  createGivenPermission: utils.createGivenPermission,
+  getIdListOfGivenPermissionByField: utils.getIdListOfGivenPermissionByField,
+  getGivenPermissionById: utils.getGivenPermissionById,
+  getGivenPermissionAggById: utils.getGivenPermissionAggById,
+  getGivenPermissionListByQuery: utils.getGivenPermissionListByQuery,
+  getGivenPermissionStatsByQuery: utils.getGivenPermissionStatsByQuery,
+  getGivenPermissionByQuery: utils.getGivenPermissionByQuery,
+  updateGivenPermissionById: utils.updateGivenPermissionById,
+  updateGivenPermissionByIdList: utils.updateGivenPermissionByIdList,
+  deleteGivenPermissionById: utils.deleteGivenPermissionById,
+};

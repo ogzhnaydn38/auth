@@ -1,0 +1,54 @@
+
+syntax = "proto3";
+
+package auth;
+
+import "google/protobuf/struct.proto";
+import "google/protobuf/timestamp.proto";
+
+
+message user {
+    string id = 1;
+    string email = 2;
+    string password = 3;
+    string fullname = 4;
+    optional string avatar = 5;
+    string roleId = 6;
+    bool emailVerified = 7;
+}
+
+
+message givenPermission {
+    string id = 1;
+    string permissionName = 2;
+    optional string roleId = 3;
+    optional string subjectUserId = 4;
+    optional string subjectUserGroupId = 5;
+    optional string objectId = 6;
+    bool canDo = 7;
+}
+
+
+
+
+
+
+
+message VoidRequest {}
+    
+message CurrentUserReply {
+    string userId = 1;
+}
+
+message HelloMessageReply {
+    string hello = 1;
+}
+
+service authService {
+
+
+
+
+    rpc currentUser(VoidRequest) returns (CurrentUserReply);
+    rpc helloMessage(VoidRequest) returns (HelloMessageReply);
+}

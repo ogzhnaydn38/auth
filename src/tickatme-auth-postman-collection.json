@@ -1,0 +1,617 @@
+{
+  "info": {
+    "name": "tickatme-auth-service API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "register-user",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"String\",\n  \"password\": \"String\",\n  \"fullname\": \"String\",\n  \"avatar\": \"String\",\n  \"roleId\": \"String\",\n  \"emailVerified\": \"Boolean\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//users",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update-user",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"password\": \"String\",\n  \"fullname\": \"String\",\n  \"avatar\": \"String\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//users/:userId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "users",
+            ":userId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update-userrole",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"roleId\": \"ID\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//userroles/:userId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "userroles",
+            ":userId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "retrive-user",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//users/:userId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "users",
+            ":userId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "list-users",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//users",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create-givenpermission",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"permissionName\": \"String\",\n  \"roleId\": \"String\",\n  \"subjectUserId\": \"String\",\n  \"subjectUserGroupId\": \"String\",\n  \"objectId\": \"String\",\n  \"canDo\": \"Boolean\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//givenpermissions",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "givenpermissions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create-rolepermission",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"roleId\": \"String\",\n  \"permissionName\": \"String\",\n  \"canDo\": \"Boolean\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//rolepermissions",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "rolepermissions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create-userpermission",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"subjectUserId\": \"ID\",\n  \"permissionName\": \"String\",\n  \"canDo\": \"Boolean\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//userpermissions",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "userpermissions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create-grouppermission",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"subjectUserGroupId\": \"ID\",\n  \"permissionName\": \"String\",\n  \"canDo\": \"Boolean\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//grouppermissions",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "grouppermissions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create-rolegrouppermission",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"roleId\": \"String\",\n  \"subjectUserGroupId\": \"ID\",\n  \"permissionName\": \"String\",\n  \"canDo\": \"Boolean\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//rolegrouppermissions",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "rolegrouppermissions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create-objectpermission",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"objectId\": \"ID\",\n  \"subjectUserId\": \"ID\",\n  \"permissionName\": \"String\",\n  \"canDo\": \"Boolean\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//objectpermissions",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "objectpermissions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create-objectgrouppermission",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"objectId\": \"ID\",\n  \"subjectUserGroupId\": \"ID\",\n  \"permissionName\": \"String\",\n  \"canDo\": \"Boolean\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//objectgrouppermissions",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "objectgrouppermissions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create-objectrolepermission",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"objectId\": \"ID\",\n  \"roleId\": \"String\",\n  \"permissionName\": \"String\",\n  \"canDo\": \"Boolean\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//objectrolepermissions",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "objectrolepermissions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create-objectgrouprolepermission",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"objectId\": \"ID\",\n  \"roleId\": \"String\",\n  \"subjectUserGroupId\": \"ID\",\n  \"permissionName\": \"String\",\n  \"canDo\": \"Boolean\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//objectgrouprolepermissions",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "objectgrouprolepermissions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update-givenpermission",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"permissionName\": \"String\",\n  \"roleId\": \"String\",\n  \"subjectUserId\": \"String\",\n  \"subjectUserGroupId\": \"String\",\n  \"objectId\": \"String\",\n  \"canDo\": \"Boolean\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//givenpermissions/:givenPermissionId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "givenpermissions",
+            ":givenPermissionId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete-givenpermission",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//givenpermissions/:givenPermissionId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "givenpermissions",
+            ":givenPermissionId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "retrive-givenpermission",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//givenpermissions/:givenPermissionId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "givenpermissions",
+            ":givenPermissionId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "list-givenpermissions",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//givenpermissions",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "givenpermissions"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
