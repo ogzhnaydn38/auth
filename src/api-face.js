@@ -65,30 +65,12 @@ module.exports = (app) => {
             body: {
               type: "json",
               content: {
-                email: {
-                  operator: "eq",
-                  value: "String",
-                },
-                password: {
-                  operator: "eq",
-                  value: "String",
-                },
-                fullname: {
-                  operator: "eq",
-                  value: "String",
-                },
-                avatar: {
-                  operator: "eq",
-                  value: "String",
-                },
-                roleId: {
-                  operator: "eq",
-                  value: "String",
-                },
-                emailVerified: {
-                  operator: "eq",
-                  value: "Boolean",
-                },
+                email: "String",
+                password: "String",
+                fullname: "String",
+                avatar: "String",
+                roleId: "String",
+                emailVerified: "Boolean",
               },
             },
             parameters: [],
@@ -104,18 +86,9 @@ module.exports = (app) => {
             body: {
               type: "json",
               content: {
-                password: {
-                  operator: "eq",
-                  value: "String",
-                },
-                fullname: {
-                  operator: "eq",
-                  value: "String",
-                },
-                avatar: {
-                  operator: "eq",
-                  value: "String",
-                },
+                password: "String",
+                fullname: "String",
+                avatar: "String",
               },
             },
             parameters: [
@@ -137,10 +110,7 @@ module.exports = (app) => {
             body: {
               type: "json",
               content: {
-                roleId: {
-                  operator: "eq",
-                  value: "ID",
-                },
+                roleId: "ID",
               },
             },
             parameters: [
@@ -237,30 +207,12 @@ module.exports = (app) => {
             body: {
               type: "json",
               content: {
-                permissionName: {
-                  operator: "eq",
-                  value: "String",
-                },
-                roleId: {
-                  operator: "eq",
-                  value: "String",
-                },
-                subjectUserId: {
-                  operator: "eq",
-                  value: "String",
-                },
-                subjectUserGroupId: {
-                  operator: "eq",
-                  value: "String",
-                },
-                objectId: {
-                  operator: "eq",
-                  value: "String",
-                },
-                canDo: {
-                  operator: "eq",
-                  value: "Boolean",
-                },
+                permissionName: "String",
+                roleId: "String",
+                subjectUserId: "String",
+                subjectUserGroupId: "String",
+                objectId: "String",
+                canDo: "Boolean",
               },
             },
             parameters: [],
@@ -276,18 +228,9 @@ module.exports = (app) => {
             body: {
               type: "json",
               content: {
-                roleId: {
-                  operator: "eq",
-                  value: "String",
-                },
-                permissionName: {
-                  operator: "eq",
-                  value: "String",
-                },
-                canDo: {
-                  operator: "eq",
-                  value: "Boolean",
-                },
+                roleId: "String",
+                permissionName: "String",
+                canDo: "Boolean",
               },
             },
             parameters: [],
@@ -303,18 +246,9 @@ module.exports = (app) => {
             body: {
               type: "json",
               content: {
-                subjectUserId: {
-                  operator: "eq",
-                  value: "ID",
-                },
-                permissionName: {
-                  operator: "eq",
-                  value: "String",
-                },
-                canDo: {
-                  operator: "eq",
-                  value: "Boolean",
-                },
+                subjectUserId: "ID",
+                permissionName: "String",
+                canDo: "Boolean",
               },
             },
             parameters: [],
@@ -330,18 +264,9 @@ module.exports = (app) => {
             body: {
               type: "json",
               content: {
-                subjectUserGroupId: {
-                  operator: "eq",
-                  value: "ID",
-                },
-                permissionName: {
-                  operator: "eq",
-                  value: "String",
-                },
-                canDo: {
-                  operator: "eq",
-                  value: "Boolean",
-                },
+                subjectUserGroupId: "ID",
+                permissionName: "String",
+                canDo: "Boolean",
               },
             },
             parameters: [],
@@ -357,22 +282,10 @@ module.exports = (app) => {
             body: {
               type: "json",
               content: {
-                roleId: {
-                  operator: "eq",
-                  value: "String",
-                },
-                subjectUserGroupId: {
-                  operator: "eq",
-                  value: "ID",
-                },
-                permissionName: {
-                  operator: "eq",
-                  value: "String",
-                },
-                canDo: {
-                  operator: "eq",
-                  value: "Boolean",
-                },
+                roleId: "String",
+                subjectUserGroupId: "ID",
+                permissionName: "String",
+                canDo: "Boolean",
               },
             },
             parameters: [],
@@ -388,22 +301,10 @@ module.exports = (app) => {
             body: {
               type: "json",
               content: {
-                objectId: {
-                  operator: "eq",
-                  value: "ID",
-                },
-                subjectUserId: {
-                  operator: "eq",
-                  value: "ID",
-                },
-                permissionName: {
-                  operator: "eq",
-                  value: "String",
-                },
-                canDo: {
-                  operator: "eq",
-                  value: "Boolean",
-                },
+                objectId: "ID",
+                subjectUserId: "ID",
+                permissionName: "String",
+                canDo: "Boolean",
               },
             },
             parameters: [],
@@ -419,22 +320,10 @@ module.exports = (app) => {
             body: {
               type: "json",
               content: {
-                objectId: {
-                  operator: "eq",
-                  value: "ID",
-                },
-                subjectUserGroupId: {
-                  operator: "eq",
-                  value: "ID",
-                },
-                permissionName: {
-                  operator: "eq",
-                  value: "String",
-                },
-                canDo: {
-                  operator: "eq",
-                  value: "Boolean",
-                },
+                objectId: "ID",
+                subjectUserGroupId: "ID",
+                permissionName: "String",
+                canDo: "Boolean",
               },
             },
             parameters: [],
@@ -450,22 +339,10 @@ module.exports = (app) => {
             body: {
               type: "json",
               content: {
-                objectId: {
-                  operator: "eq",
-                  value: "ID",
-                },
-                roleId: {
-                  operator: "eq",
-                  value: "String",
-                },
-                permissionName: {
-                  operator: "eq",
-                  value: "String",
-                },
-                canDo: {
-                  operator: "eq",
-                  value: "Boolean",
-                },
+                objectId: "ID",
+                roleId: "String",
+                permissionName: "String",
+                canDo: "Boolean",
               },
             },
             parameters: [],
@@ -481,26 +358,11 @@ module.exports = (app) => {
             body: {
               type: "json",
               content: {
-                objectId: {
-                  operator: "eq",
-                  value: "ID",
-                },
-                roleId: {
-                  operator: "eq",
-                  value: "String",
-                },
-                subjectUserGroupId: {
-                  operator: "eq",
-                  value: "ID",
-                },
-                permissionName: {
-                  operator: "eq",
-                  value: "String",
-                },
-                canDo: {
-                  operator: "eq",
-                  value: "Boolean",
-                },
+                objectId: "ID",
+                roleId: "String",
+                subjectUserGroupId: "ID",
+                permissionName: "String",
+                canDo: "Boolean",
               },
             },
             parameters: [],
@@ -516,30 +378,12 @@ module.exports = (app) => {
             body: {
               type: "json",
               content: {
-                permissionName: {
-                  operator: "eq",
-                  value: "String",
-                },
-                roleId: {
-                  operator: "eq",
-                  value: "String",
-                },
-                subjectUserId: {
-                  operator: "eq",
-                  value: "String",
-                },
-                subjectUserGroupId: {
-                  operator: "eq",
-                  value: "String",
-                },
-                objectId: {
-                  operator: "eq",
-                  value: "String",
-                },
-                canDo: {
-                  operator: "eq",
-                  value: "Boolean",
-                },
+                permissionName: "String",
+                roleId: "String",
+                subjectUserId: "String",
+                subjectUserGroupId: "String",
+                objectId: "String",
+                canDo: "Boolean",
               },
             },
             parameters: [
