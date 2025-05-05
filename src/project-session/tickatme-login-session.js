@@ -208,6 +208,23 @@ class TickatmeLoginSession extends TickatmeSession {
     }
   }
 
+  async logoutUserController(req, res, next) {
+    console.log("logoutUserController", req.session?.userId);
+    try {
+      // delete the session from redis
+      if (req.session) {
+        await this.deleteSessionFromEntityCache(req.session.sessionId);
+      }
+      // set cookie to be deleted
+      if (this.currentCookieName) {
+        res.clearCookie(this.currentCookieName);
+      }
+    } catch (err) {
+      console.log("Error while logging out", err.message);
+    }
+    res.status(200).send("LOGOUT OK");
+  }
+
   async init() {
     await this.initSuperAdmin();
     await this.initUserManager();

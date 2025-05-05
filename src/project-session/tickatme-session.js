@@ -66,6 +66,7 @@ class TickatmeSession extends HexaAuth {
     sessionToken = this.getCookieToken("tickatme-access-token", req);
     if (sessionToken) {
       console.log("Tenant Token extracted:", "cookie", "tickatme-access-token");
+      this.currentCookieName = "tickatme-access-token";
       return [sessionToken, false, "cookie", "tickatme-access-token"];
     }
 
